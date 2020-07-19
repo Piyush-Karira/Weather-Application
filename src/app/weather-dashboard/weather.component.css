@@ -1,0 +1,35 @@
+.input{
+  padding: 1%;
+}
+
+.btn{
+  position: absolute;
+  width:100%;
+  bottom: 0;
+  background-color:#002b80
+}
+
+.divWeatherMain{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    width: 240px;
+    height: 260px;
+    position: relative;
+    background:linear-gradient(to bottom left, #00ffcc 0%, #0066cc 41%);
+    cursor: pointer;
+    color:black;
+    font-weight: bold;
+    border-style: solid;
+    border-color: #002b80;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.weatherWidgetRow{
+    display: block;
+    margin:0 auto;
+    width: fit-content;
+    position: relative;
+    top:5%; 
+}

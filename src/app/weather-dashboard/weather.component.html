@@ -1,0 +1,21 @@
+<div class="container" style="margin-top: 15px">
+  <div class="card-columns" style="padding: 1%">
+
+    <!-- HTML FOR SINGLE WEATHER PANEL -->
+    <div *ngFor="let id of ID" Class="divWeatherMain" [ngStyle]=getImageStyle(id) (click)="changePanel(id)">
+        <div class="input">
+          <input *ngIf="(activePanel[id]&&panelData[id]==undefined) || edit[id]" type="text" class="form-control" [(ngModel)]="city[id]" 
+          (change)='onSubmit(id)' placeholder="Enter City Name..">
+        </div>
+        <span *ngIf="error[id]"><font style="color: red;">Enter the correct city</font></span>
+        <div *ngIf="panelData[id]!=undefined" class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">
+          {{panelData[id].temp_celcius}}°</div>
+        <div *ngIf="panelData[id]!=undefined" class="weatherWidgetRow" style="font-size: 12px;">{{panelData[id].temp_min}}° / {{panelData[id].temp_max}}°</div>
+        <div *ngIf="panelData[id]!=undefined" class="weatherWidgetRow" style="font-size: 12px;">Weather: {{panelData[id].weatherCon}}</div>
+        <div *ngIf="panelData[id]!=undefined" class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;">{{panelData[id].name}}</div>
+        <div *ngIf="panelData[id]!=undefined" class="weatherWidgetRow" style="font-size: 12px;">Humidity: {{panelData[id].main.humidity}}%</div>
+        <button *ngIf="panelData[id]!=undefined" type="button" class="btn btn-primary" (click)="edit[id] = !edit[id]">Edit</button>
+    </div>
+
+  </div>
+</div>
