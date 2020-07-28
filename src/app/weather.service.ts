@@ -13,7 +13,7 @@ export class WeatherService {
   private urltest: string = '../assets/data.json';
   private url: string = 'https://api.openweathermap.org/data/2.5/weather'
   constructor (private http:HttpClient) { }
-  private api_key = '6f4f0d90fc2993f6e1260d12da9b8b2a';
+  private api_key = 'API_KEY';
 
   getWeatherData(name):Observable<any>{
     let params = {
